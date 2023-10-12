@@ -3,8 +3,8 @@ import React, {useState, useEffect} from 'react'
 import { StyleSheet, View, Text, Image, ScrollView, Pressable } from 'react-native'
 
 
-const URL = 'https://newsapi.org/v2'
-const APIKEY = '612a06e14b234e7aa1d1efa91ad5fa5d'
+const URL = 'https://newsapi.org/v2';
+const APIKEY = '612a06e14b234e7aa1d1efa91ad5fa5d';
 
 export default function News({navigation}) {
   const [error, setError] = useState(null);
@@ -49,7 +49,7 @@ export default function News({navigation}) {
       <View style={styles.container}>
         <ScrollView>
           {items.map(item =>(
-            <Pressable key={item.title} onPress={() => navigation.navigate('Details',{newa: item})}>
+            <Pressable key={item.title} onPress={() => navigation.navigate('Details',{news: item})}>
             <View style={styles.news}>
               <Text style={styles.title}>{item.title}</Text>
               <View style={styles.imageWrapper}>
